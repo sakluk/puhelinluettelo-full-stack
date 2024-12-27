@@ -7,7 +7,7 @@ https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6
   Tunnit | Tehtävä                 |
 | -----  | ----------------------- |
 | 3 | Opiskeltu osaa 3 node.js ja express |
-| 1      | Luotu uusi projekti             |
+| 1      | Luotu ja alustettu uusi projekti             |
 | **3**  | **Yhteensä**            |
 
 ## Muistiinpanot
@@ -25,3 +25,4 @@ https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6
     git config --global user.email "your_email@example.com"
     git config --global user.name "Your Name"
     ```
+- Kopioitu pohjaksi esimerkin `ìndex.js`
