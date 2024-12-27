@@ -3,51 +3,56 @@ const app = express()
 
 app.use(express.json())
 
-let notes = [
-  {
-    id: "1",
-    content: "HTML is SUPER easy",
-    important: true
-  },
-  {
-    id: "2",
-    content: "Browser can execute only JavaScript",
-    important: false
-  },
-  {
-    id: "3",
-    content: "GET and POST are the most important methods of HTTP protocol",
-    important: true
-  }
+let persons = [
+    {
+      "name": "Arto Hellas",
+      "number": "040-999321",
+      "id": "1"
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": "2"
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": "3"
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": "4"
+    }
 ]
 
 app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
 })
 
-app.get('/api/notes', (request, response) => {
-  response.json(notes)
+app.get('/api/persons', (request, response) => {
+  response.json(persons)
 })
 
-app.get('/api/notes/:id', (request, response) => {
+app.get('/api/persons/:id', (request, response) => {
     const id = request.params.id
-    const note = notes.find(note => note.id === id)
+    const person = persons.find(x => x.id === id)
     
-    if (note) {
-      response.json(note)
+    if (person) {
+      response.json(person)
     } else {
       response.status(404).end()
     }
   })
 
   const generateId = () => {
-    const maxId = notes.length > 0
-      ? Math.max(...notes.map(n => Number(n.id)))
+    const maxId = persons.length > 0
+      ? Math.max(...persons.map(n => Number(n.id)))
       : 0
     return String(maxId + 1)
   }
   
-  app.post('/api/notes', (request, response) => {
+  app.post('/api/persons', (request, response) => {
     const body = request.body
   
     if (!body.content) {
@@ -56,20 +61,20 @@ app.get('/api/notes/:id', (request, response) => {
       })
     }
   
-    const note = {
-      content: body.content,
-      important: body.important || false,
+    const person = {
+      name: body.name,
+      number: body.number,
       id: generateId(),
     }
   
-    notes = notes.concat(note)
+    persons = persons.concat(person)
   
-    response.json(note)
+    response.json(person)
   })
 
 app.delete('/api/notes/:id', (request, response) => {
     const id = request.params.id
-    notes = notes.filter(note => note.id !== id)
+    persons = persons.filter(x => x.id !== id)
 
     response.status(204).end()
   })

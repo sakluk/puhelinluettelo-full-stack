@@ -1,14 +1,14 @@
 # puhelinluettelo-full-stack
-Fullstackopen -kurssin puhelinluettelo sovellus
+Fullstackopen -kurssin puhelinluettelo sovellus.
+Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6)
 
-https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
 | -----  | ----------------------- |
 | 3 | Opiskeltu osaa 3 node.js ja express |
-| 1      | Luotu ja alustettu uusi projekti             |
-| **3**  | **Yhteensä**            |
+| 1      | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
+| **4**  | **Yhteensä**            |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -17,7 +17,7 @@ https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6
 - Luotu uusi kansio [puhelinluettelo-full-stack](https://github.com/sakluk/puhelinluettelo-full-stack) GitHubiin
 - Alustettu projekti antamalla komento `npm init`
 - Asennettu express `npm install express` 
-- Päivitetty projekit `npm update`
+- Päivitetty projekti `npm update`
 - Asennettu nodemon `npm install --save-dev nodemon`
 - Lisätty `package.json` tiedostoon "start" ja "dev" komennot
 - Annettu gitissä Github-tilin user.name and user.email
@@ -26,3 +26,4 @@ https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6
     git config --global user.name "Your Name"
     ```
 - Kopioitu pohjaksi esimerkin `ìndex.js`
+- Lisätty `persons` lista ja muutettu `index.js` vastaamaan puhelinluettelon käsittelyä
