@@ -27,8 +27,14 @@ let persons = [
 ]
 
 app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
+  response.send('<h1>Se on moro!</h1>')
 })
+
+// Copilotin genroima koodi
+app.get('/info', (request, response) => {
+    response.send(`<p>Puhelinmuistiossa on ${persons.length} henkilön tiedot.</p>
+    <p>${new Date()}</p>`)
+  })
 
 app.get('/api/persons', (request, response) => {
   response.json(persons)
@@ -57,7 +63,7 @@ app.get('/api/persons/:id', (request, response) => {
   
     if (!body.content) {
       return response.status(400).json({ 
-        error: 'content missing' 
+        error: 'Sisältö puuttuu' 
       })
     }
   
@@ -81,5 +87,5 @@ app.delete('/api/notes/:id', (request, response) => {
 
 const PORT = 3001
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+  console.log(`Palvelin palvelee portissa ${PORT}`)
 })

@@ -4,11 +4,12 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
 
 
 ## Käytetyt tunnit
-  Tunnit | Tehtävä                 |
-| -----  | ----------------------- |
+  Tunnit | Tehtävä      |
+| -----  | ------------ |
 | 3 | Opiskeltu osaa 3 node.js ja express |
-| 1      | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
-| **4**  | **Yhteensä**            |
+| 1 | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
+| 1 | Tehty tehtävä 3.2 |
+| **5**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -27,3 +28,4 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
     ```
 - Kopioitu pohjaksi esimerkin `ìndex.js`
 - Lisätty `persons` lista ja muutettu `index.js` vastaamaan puhelinluettelon käsittelyä
+- Lisätty `/info` sivu (tehtävä 3.2)
