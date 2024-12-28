@@ -3,7 +3,7 @@ Fullstackopen -kurssin puhelinluettelo sovellus.
 Sovellus vastaa tehtäviin 
 - [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6)
 - [3.7 ja 3.8](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-7-3-8)
-
+- [3.9 - 3.11](https://fullstackopen.com/osa3/sovellus_internetiin#tehtavat-3-9-3-11)
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä      |
@@ -13,8 +13,8 @@ Sovellus vastaa tehtäviin
 | 1 | Tehty tehtävät 3.2 - 3.6 |
 | 1 | Tehty tehtävät 3.7 ja 3.8 |
 | 2 | Opiskelut osaa 3b Sovellus internettiin | 
-| 1 | Tehty tehtävä 3.9 |
-| **9**  | **Yhteensä** |
+| 2 | Tehty tehtävät 3.9 - 3.11 |
+| **10**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -45,9 +45,10 @@ Sovellus vastaa tehtäviin
 - Opiskeltu [miten viedään sovellus internettiin](https://fullstackopen.com/osa3/sovellus_internetiin)
 - Asennettu cors `npm install cors` ja lisätty `cors` palvelimeen
 - Fly.io näytti olevan nykyään (28.12.2024) maksullinen, joten otin käyttöön [Render] GitHub-tunnuksilla
-- Lisätty "build:ui" ja "build:full" skriptit `package.json` tiedostoon
+- Lisätty "build:ui" ja "build:full" skriptit palvelimen `package.json` tiedostoon
 - Vaihdettu selain(front)-puolen `persons.js` baseUrl 
 - Lisätty selain-puolen `vite.config.json` tiedostoon proxyn käyttö
+- Viety https://dashboard.render.com/, näyttäisi toimivan
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
