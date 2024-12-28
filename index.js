@@ -43,40 +43,40 @@ app.get('/api/persons', (request, response) => {
 app.get('/api/persons/:id', (request, response) => {
     const id = request.params.id
     const person = persons.find(x => x.id === id)
-    
-    if (person) {
-      response.json(person)
-    } else {
-      response.status(404).end()
-    }
-  })
 
-  const generateId = () => {
+    if (person) {
+        response.json(person)
+    } else {
+        response.status(404).end()
+    }
+})
+
+const generateId = () => {
     const maxId = persons.length > 0
-      ? Math.max(...persons.map(n => Number(n.id)))
-      : 0
+        ? Math.max(...persons.map(n => Number(n.id)))
+        : 0
     return String(maxId + 1)
-  }
+}
   
-  app.post('/api/persons', (request, response) => {
+app.post('/api/persons', (request, response) => {
     const body = request.body
-  
+
     if (!body.content) {
-      return response.status(400).json({ 
-        error: 'Sisältö puuttuu' 
-      })
+        return response.status(400).json({
+            error: 'Sisältö puuttuu'
+        })
     }
-  
+
     const person = {
-      name: body.name,
-      number: body.number,
-      id: generateId(),
+        name: body.name,
+        number: body.number,
+        id: generateId(),
     }
-  
+
     persons = persons.concat(person)
-  
+
     response.json(person)
-  })
+})
 
 app.delete('/api/notes/:id', (request, response) => {
     const id = request.params.id
