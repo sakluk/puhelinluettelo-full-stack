@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const morgan = require('morgan')
 
 app.use(express.json())
+app.use(cors())
 
 // Copilotin generoima koodi
 // Määritellään morgan token, joka tulostaa pyynnön bodyn
@@ -114,7 +116,7 @@ app.delete('/api/persons/:id', (request, response) => {
     response.status(204).end()
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Palvelin palvelee portissa ${PORT}`)
 })
