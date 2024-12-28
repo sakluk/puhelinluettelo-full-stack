@@ -8,7 +8,7 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
 | -----  | ------------ |
 | 3 | Opiskeltu osaa 3 node.js ja express |
 | 1 | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
-| 1 | Tehty tehtävät 3.2 - 3.5 |
+| 1 | Tehty tehtävät 3.2 - 3.6 |
 | **5**  | **Yhteensä** |
 
 ## Muistiinpanot
