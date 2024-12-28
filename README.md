@@ -1,6 +1,8 @@
 # puhelinluettelo-full-stack
 Fullstackopen -kurssin puhelinluettelo sovellus.
-Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6)
+Sovellus vastaa tehtäviin 
+- [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6)
+- [3.7 ja 3.8](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-7-3-8)
 
 
 ## Käytetyt tunnit
@@ -9,7 +11,8 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
 | 3 | Opiskeltu osaa 3 node.js ja express |
 | 1 | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
 | 1 | Tehty tehtävät 3.2 - 3.6 |
-| **5**  | **Yhteensä** |
+| 1 | Tehty tehtävät 3.7 ja 3.8 |
+| **8**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -33,8 +36,13 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
 - Lisätty puhelintietojen poisto (tehtävä 3.4)
 - Lisätty puhelintietojen lisääminen (tehtävä 3.5)
 - Lisätty uuden numeron virheiden käsittely (tehtävä 3.6)
+- Luettu Middleware osio, opiskeltu [morganin](https://github.com/expressjs/morgan) käyttöä
+- Asennettu morgan `npm install morgan`
+- Lisätty morgan loggaamaan konsoliin (tehtävä 3.7)
+- Muokattu Copilotin avulla morgan näyttämään HTTP POST -pyyntöjen mukana tulevan datan, lisätty koodiin kommentit Copilotin käytöstä
+
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 
-Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan.
+Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan. Esim. tehtävässä 3.8* antamalla Copilotille kehotteen: "Konfiguroi morgania näyttämään HTTP POST-pyyntöjen mukana tulevan datan", koodi oli valmis hetkessä.
 

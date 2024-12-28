@@ -1,7 +1,16 @@
 const express = require('express')
 const app = express()
+const morgan = require('morgan')
 
 app.use(express.json())
+
+// Copilotin generoima koodi
+// Määritellään morgan token, joka tulostaa pyynnön bodyn
+// Lisätietoja:
+// https://github.com/expressjs/morgan#creating-new-tokens
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+morgan.token('body', (req) => JSON.stringify(req.body))
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
 let persons = [
     {
@@ -60,7 +69,7 @@ function generateRandomId(max) {
 // Lisätään henkilö
 app.post('/api/persons', (request, response) => {
     const body = request.body
-    console.log('body', body)
+    // console.log('body', body)
     
     // Jaetaan koodi kahteen if-lausekkeeseen
     // Tarkistetaan onko nimi ja numero annettu
@@ -90,7 +99,7 @@ app.post('/api/persons', (request, response) => {
         number: body.number,
         id: generateRandomId(100000),
     }
-    console.log('person', person)
+    // console.log('person', person)
 
     persons = persons.concat(person)
 
