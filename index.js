@@ -44,6 +44,7 @@ app.get('/api/persons/:id', (request, response) => {
     const id = request.params.id
     const person = persons.find(x => x.id === id)
 
+    // Tarkistetaan onko henkilö olemassa
     if (person) {
         response.json(person)
     } else {
