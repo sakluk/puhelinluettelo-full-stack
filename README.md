@@ -12,7 +12,7 @@ Sovellus vastaa tehtäviin
 | 1 | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
 | 1 | Tehty tehtävät 3.2 - 3.6 |
 | 1 | Tehty tehtävät 3.7 ja 3.8 |
-| **8**  | **Yhteensä** |
+| **6**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
