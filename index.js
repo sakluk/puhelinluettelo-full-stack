@@ -30,7 +30,7 @@ app.get('/', (request, response) => {
   response.send('<h1>Se on moro!</h1>')
 })
 
-// Copilotin genroima koodi
+// Copilotin generoima koodi
 app.get('/info', (request, response) => {
     response.send(`<p>Puhelinmuistiossa on ${persons.length} henkilön tiedot.</p>
     <p>${new Date()}</p>`)
@@ -62,9 +62,26 @@ app.post('/api/persons', (request, response) => {
     const body = request.body
     console.log('body', body)
     
-    if (!body.name || !body.number) {
+    // Jaetaan koodi kahteen if-lausekkeeseen
+    // Tarkistetaan onko nimi ja numero annettu
+    if (!body.name) {
         return response.status(400).json({
-            error: 'Nimi tai numero puuttuu'
+            error: 'Nimi puuttuu'
+        })
+    }
+
+    if (!body.number) {
+        return response.status(400).json({
+            error: 'Numero puuttuu'
+        })
+    }
+
+    // Copilotin generoima koodi
+    // Tarkistetaan onko nimi jo olemassa
+    const nameExists = persons.find(x => x.name === body.name)
+    if (nameExists) {
+        return response.status(400).json({
+            error: 'Nimi on jo olemassa'
         })
     }
 

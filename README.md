@@ -32,4 +32,9 @@ Sovellus vastaa tehtäviin [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja
 - Lisätty yksittäisen henkilön tietojen näyttö (tehtävä 3.3)
 - Lisätty puhelintietojen poisto (tehtävä 3.4)
 - Lisätty puhelintietojen lisääminen (tehtävä 3.5)
+- Lisätty uuden numeron virheiden käsittely (tehtävä 3.6)
+
+Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
+
+Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan.
 
