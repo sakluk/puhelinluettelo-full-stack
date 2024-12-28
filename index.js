@@ -79,12 +79,13 @@ app.post('/api/persons', (request, response) => {
     response.json(person)
 })
 
-app.delete('/api/notes/:id', (request, response) => {
+// Poistetaan henkilö
+app.delete('/api/persons/:id', (request, response) => {
     const id = request.params.id
     persons = persons.filter(x => x.id !== id)
 
     response.status(204).end()
-  })
+})
 
 const PORT = 3001
 app.listen(PORT, () => {
