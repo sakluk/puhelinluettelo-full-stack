@@ -14,6 +14,7 @@ Sovellus vastaa tehtäviin
 | 1 | Tehty tehtävät 3.7 ja 3.8 |
 | 2 | Opiskelut osaa 3b Sovellus internettiin | 
 | 2 | Tehty tehtävät 3.9 - 3.11 |
+| 2 | Opiskeltu Azuren käyttöä |
 | **10**  | **Yhteensä** |
 
 ## Muistiinpanot
@@ -49,7 +50,7 @@ Sovellus vastaa tehtäviin
 - Vaihdettu selain(front)-puolen `persons.js` baseUrl 
 - Lisätty selain-puolen `vite.config.json` tiedostoon proxyn käyttö
 - Viety https://dashboard.render.com/, näyttäisi toimivan
-
+- Opiskeltu [miten sovellus otetaan käyttöön Microsoft Azuressa](https://learn.microsoft.com/en-us/azure/app-service/)
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 
