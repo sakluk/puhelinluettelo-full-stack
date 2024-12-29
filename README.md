@@ -51,6 +51,12 @@ Sovellus vastaa tehtäviin
 - Lisätty selain-puolen `vite.config.json` tiedostoon proxyn käyttö
 - Viety https://dashboard.render.com/, näyttäisi toimivan
 - Opiskeltu [miten sovellus otetaan käyttöön Microsoft Azuressa](https://learn.microsoft.com/en-us/azure/app-service/)
+- Jatkettu opiskelua osasta 3c. [tietojen tallentaminen mongoDB-tietokantaan](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#mongo-db)
+  - Avattu tili https://cloud.mongodb.com/
+  - Luotu klusteri
+  - Seurattu Connect to cluster ohjeita ja asennettu palvelinkoodiin mongoDB `npm install mongodb`
+  - Jatkettu ohjeiden lukemista ja asennettu Mongoose `npm install mongoose`
+
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 
