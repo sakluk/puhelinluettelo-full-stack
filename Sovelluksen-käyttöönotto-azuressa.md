@@ -1,6 +1,8 @@
 # Sovelluksen käyttöönotto Azuressa
 
-**Disclaimer: Nämä ohjeet on generoitu ja käännetty suomeksi käyttäen VSCoden Copilotia.**
+**Disclaimer: Nämä ohjeet on generoitu ja käännetty suomeksi käyttäen VSCoden Copilotia. Ei toiminut. Ilmeisesti ainakin location pitäisi muuttaa "Germany West Central", koska "Sweden Central" ei tarjoa tarvittavaa palvelua. Sain jotenkin luotua Azure Web Appin verkkosivujen kautta, mutta sisältö on vielä tyhjää. Alla on muutamia sivuja opiskeltavaksi: **
+
+- https://learn.microsoft.com/en-us/azure/app-service/
 
 Node.js-sovelluksen käyttöönotto Microsoft Azureen, seuraa näitä ohjeita:
 
