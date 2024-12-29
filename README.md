@@ -15,6 +15,7 @@ Sovellus vastaa tehtäviin
 | 2 | Opiskelut osaa 3b Sovellus internettiin | 
 | 2 | Tehty tehtävät 3.9 - 3.11 |
 | 2 | Opiskeltu Azuren käyttöä |
+| 1 | Opiskeltu MongoDB:n käyttöä |
 | **10**  | **Yhteensä** |
 
 ## Muistiinpanot
@@ -56,6 +57,7 @@ Sovellus vastaa tehtäviin
   - Luotu klusteri
   - Seurattu Connect to cluster ohjeita ja asennettu palvelinkoodiin mongoDB `npm install mongodb`
   - Jatkettu ohjeiden lukemista ja asennettu Mongoose `npm install mongoose`
+  - Opiskeltu mongoDB:n toimintaa [mongo_test.js](./mongo_test.js) ja [mongoose_test.js](./mongoose_test.js) avulla
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
