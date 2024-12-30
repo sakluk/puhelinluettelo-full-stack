@@ -4,6 +4,7 @@ Sovellus vastaa tehtäviin
 - [3.1 - 3.6](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-1-3-6)
 - [3.7 ja 3.8](https://fullstackopen.com/osa3/node_js_ja_express#tehtavat-3-7-3-8)
 - [3.9 - 3.11](https://fullstackopen.com/osa3/sovellus_internetiin#tehtavat-3-9-3-11)
+- [3.12](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtava-3-12)
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä      |
@@ -16,7 +17,8 @@ Sovellus vastaa tehtäviin
 | 2 | Tehty tehtävät 3.9 - 3.11 |
 | 2 | Opiskeltu Azuren käyttöä |
 | 1 | Opiskeltu MongoDB:n käyttöä |
-| **10**  | **Yhteensä** |
+| 2 | Tehty tehtävä 3.12 |
+| **15**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -58,9 +60,12 @@ Sovellus vastaa tehtäviin
   - Seurattu Connect to cluster ohjeita ja asennettu palvelinkoodiin mongoDB `npm install mongodb`
   - Jatkettu ohjeiden lukemista ja asennettu Mongoose `npm install mongoose`
   - Opiskeltu mongoDB:n toimintaa [mongo_test.js](./mongo_test.js) ja [mongoose_test.js](./mongoose_test.js) avulla
+  - Suoritettu tehtävä 3.12 - koodi tallennettu [mongo.js](./mongo.js), muutettu `mongoose_test.js` nimetty uudelleen `mongo.js`
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
+
+MongoDB-tehtävän (3.12) kanssa oli vaikeuksia. Sain esimerkit toimimaan ja aloitin koodaamaan omaa versiota. Huomasin, että yhteyden avaaminen ei onnistunut ja jouduin palaamaan takaisin aiempiin yksinkertaisempiin esimerkkeihin. Muokkaamalla esimerkkikoodia vähän kerrallaan sain toimivan [mongo.js](./mongo.js) kirjoitettua.
 
 Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan. Esim. tehtävässä 3.8* antamalla Copilotille kehotteen: "Konfiguroi morgania näyttämään HTTP POST-pyyntöjen mukana tulevan datan", koodi oli valmis hetkessä.
 
