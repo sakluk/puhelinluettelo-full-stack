@@ -1,0 +1,52 @@
+#### lue info
+GET http://localhost:3001/info
+
+
+#### Lue kaikki henkilöt
+GET http://localhost:3001/api/persons
+
+
+### lue yksittäinen henkilö
+GET http://localhost:3001/api/persons/67726a2d4754857cd0651a0f
+
+
+### lue väärällä id:llä
+GET http://localhost:3001/api/persons/67726a2
+
+
+#### lisää henkilö
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Minna Canth",
+  "number": "001-1844-03-19"
+}
+
+### lisää henkilö ilman nimeä
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "012-345-0001"
+}
+
+### lisää henkilö ilman numeroa
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Minna Canth"
+}
+
+### lisää henkilö ilman nimeä ja numeroa
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+}
+
+### Poista henkilö
+DELETE http://localhost:3001/api/persons/3
+
+
