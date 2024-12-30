@@ -8,8 +8,8 @@
     "start": "node index.js",
     "debug": "node --inspect index.js",
     "dev": "nodemon index.js",
-    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../fullstack-mooc/osa3/puhelinluettelo && npm run build && @powershell Copy-Item dist -Recurse ../../../puhelinluettelo-full-stack",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "build": "@powershell Remove-Item -Recurse -Force dist && cd ../fullstack-mooc/osa3/puhelinluettelo && npm run build && @powershell Copy-Item dist -Recurse ../../../puhelinluettelo-full-stack",
+    "deploy": "npm run build && git add . && git commit -m uibuild && git push"
   },
   "author": "Sakari Lukkarinen",
   "license": "ISC",

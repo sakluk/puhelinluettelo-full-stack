@@ -20,7 +20,7 @@ Sovellus vastaa tehtäviin
 | 1 | Opiskeltu MongoDB:n käyttöä |
 | 2 | Tehty tehtävä 3.12 |
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
-| 1 | Tehty tehtävä 3.13 |
+| 1 | Tehty tehtävät 3.13 ja 3.14 |
 | **15**  | **Yhteensä** |
 
 ## Muistiinpanot
@@ -66,8 +66,9 @@ Sovellus vastaa tehtäviin
   - Suoritettu tehtävä 3.12 - koodi tallennettu [mongo.js](./mongo.js), muutettu `mongoose_test.js` nimetty uudelleen `mongo.js`
   - Jatkettu opiskelua: palvelun ja tietokanta
   - Asennettu dotenv `npm install dotenv`
-  - Tehty tehtävä 3.13
-
+  - Tehty tehtäviä 3.13 ja 3.14
+  - Tehty muutokset selainpuolen koodiin
+  
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 
