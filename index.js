@@ -52,66 +52,58 @@ app.get('/info', (request, response) => {
 
 
 app.get('/api/persons', (request, response) => {
+     
     Note.find({}).then(notes => {
       response.json(notes)
     })
   })
 
-app.get('/api/persons/:id', (request, response) => {
-    const id = request.params.id
-    const person = persons.find(x => x.id === id)
-
-    // Tarkistetaan onko henkilö olemassa
-    if (person) {
-        response.json(person)
-    } else {
-        response.status(404).end()
-    }
+// Tarkastele yksittäistä henkilöä
+  app.get('/api/persons/:id', (request, response) => {
+  Person.findById(request.params.id).then(person => {
+    response.json(person)
+  })   
 })
-
-// Generoi satunnaisen numeron
-function generateRandomId(max) {
-    return Math.floor(Math.random() * max);
-  }
 
 // Lisätään henkilö
 app.post('/api/persons', (request, response) => {
     const body = request.body
-    // console.log('body', body)
-    
-    // Jaetaan koodi kahteen if-lausekkeeseen
+    console.log('body', body)
+        
+    if (body.content === undefined  || body.content === '') {
+        return response.status(400).json({
+        error: 'sisältö puuttuu' })
+    }
+
     // Tarkistetaan onko nimi ja numero annettu
     if (!body.name) {
         return response.status(400).json({
-            error: 'Nimi puuttuu'
-        })
+            error: 'Nimi puuttuu' })
     }
 
     if (!body.number) {
         return response.status(400).json({
-            error: 'Numero puuttuu'
-        })
+            error: 'Numero puuttuu' })
     }
 
-    // Copilotin generoima koodi
+    // Vanha Copilotin generoima koodi
     // Tarkistetaan onko nimi jo olemassa
-    const nameExists = persons.find(x => x.name === body.name)
-    if (nameExists) {
-        return response.status(400).json({
-            error: 'Nimi on jo olemassa'
-        })
-    }
+    // const nameExists = persons.find(x => x.name === body.name)
+    // if (nameExists) {
+    //     return response.status(400).json({
+    //         error: 'Nimi on jo olemassa'
+    //     })
+    // }
 
-    const person = {
-        name: body.name,
-        number: body.number,
-        id: generateRandomId(100000),
-    }
-    // console.log('person', person)
+    // Uusi koodi
+    const person = new Person({
+      name: body.name,  
+      number: body.number,
+    })
 
-    persons = persons.concat(person)
-
-    response.json(person)
+    person.save().then(savedPerson => {
+      response.json(savedPerson)
+    })
 })
 
 // Poistetaan henkilö
