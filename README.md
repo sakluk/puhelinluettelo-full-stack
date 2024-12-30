@@ -61,6 +61,8 @@ Sovellus vastaa tehtäviin
   - Jatkettu ohjeiden lukemista ja asennettu Mongoose `npm install mongoose`
   - Opiskeltu mongoDB:n toimintaa [mongo_test.js](./mongo_test.js) ja [mongoose_test.js](./mongoose_test.js) avulla
   - Suoritettu tehtävä 3.12 - koodi tallennettu [mongo.js](./mongo.js), muutettu `mongoose_test.js` nimetty uudelleen `mongo.js`
+  - Jatkettu opiskelua: palvelun ja tietokanta
+  - Asennettu dotenv `npm install dotenv`
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.

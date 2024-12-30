@@ -1,7 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
+const Person = require('./models/person')
 
 app.use(express.static('dist'))
 app.use(express.json())
@@ -48,9 +50,12 @@ app.get('/info', (request, response) => {
     <p>${new Date()}</p>`)
   })
 
+
 app.get('/api/persons', (request, response) => {
-  response.json(persons)
-})
+    Note.find({}).then(notes => {
+      response.json(notes)
+    })
+  })
 
 app.get('/api/persons/:id', (request, response) => {
     const id = request.params.id
@@ -117,7 +122,7 @@ app.delete('/api/persons/:id', (request, response) => {
     response.status(204).end()
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Palvelin palvelee portissa ${PORT}`)
 })
