@@ -10,6 +10,7 @@ Sovellus vastaa tehtäviin
 ## Pikalinkit muihin työkaluihin
 - [MongoDB cloud](https://cloud.mongodb.com/)
 - [Render dashboard](https://dashboard.render.com/)
+  - [Deploy for free | Render](https://render.com/docs/free)
 - [Azure portal](https://portal.azure.com/)
 - [Puhelinluettelo onrender](https://puhelinluettelo-full-stack-47c1.onrender.com)
 
@@ -74,6 +75,8 @@ Sovellus vastaa tehtäviin
   - Asennettu dotenv `npm install dotenv`
   - Tehty tehtäviä 3.13 ja 3.14
   - Tehty muutokset selainpuolen koodiin
+- Homma toimii kehitysympäristössä, mutta käyttöympäristössä tietokantayhteys katkesi?
+
   
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
