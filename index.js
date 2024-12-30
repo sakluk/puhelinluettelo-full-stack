@@ -4,15 +4,16 @@ const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
 const Person = require('./models/person')
+const requestLogger = require('./middleware/requestLogger')
 
 app.use(express.static('dist'))
 app.use(express.json())
 app.use(cors())
-
 // Copilotin generoima koodi
 // Määritellään morgan token, joka tulostaa pyynnön bodyn
 morgan.token('body', (req) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
+app.use(requestLogger) // Lisätty virheidenkäsittelijä
 
 
 app.get('/', (request, response) => {
@@ -20,10 +21,7 @@ app.get('/', (request, response) => {
 })
 
 // Info-sivu
-// Copilotin generoima koodi
 app.get('/info', (request, response) => {
-
-  // Lue henkilöiden määrä
   Person.find({}).then(persons => {
     response.send(`<p>Puhelinmuistiossa on ${persons.length} henkilön tiedot.</p>
       <p>${new Date()}</p>`)
@@ -39,17 +37,19 @@ app.get('/api/persons', (request, response) => {
 })
 
 // Tarkastele yksittäistä henkilöä
-app.get('/api/persons/:id', (request, response) => {
-  Person.findById(request.params.id).then(person => {
-    response.json(person)
-  }).
-    catch(error => {
-      console.log(error)
+app.get('/api/persons/:id', (request, response, next) => {
+  Person.findById(request.params.id)
+  .then(person => {
+    if (person) {
+      response.json(person)
+    } else {
       response.status(404).end()
-    })
+    }
+  })
+  .catch(error => next(error))
 })
 
-// Lisätään henkilö
+// Lisää henkilö
 app.post('/api/persons', (request, response) => {
   const body = request.body
   console.log('body', body)
@@ -77,26 +77,40 @@ app.post('/api/persons', (request, response) => {
   })
 })
 
-// Poistetaan henkilö
-app.delete('/api/persons/:id', (request, response) => {
+// Poista henkilö
+app.delete('/api/persons/:id', (request, response, next) => {
   const id = request.params.id
-  console.log('Poistettava id:', id)
+  //console.log('Poistettava id:', id)
 
   // Etsitään henkilö Id:n perusteella ja poistetaan
   Person.findByIdAndDelete(id)
   .then(result => {
     if (result) {
       response.status(204).end()
-      console.log('Poistettu henkilö id:', id)
-    } else {
-      response.status(404).end()
     }
   })
-  .catch(error => {
-    console.log(error)
-    response.status(500).end()
-  })
+  .catch(error => next(error))
 })
+
+// olemattomien osoitteiden käsittely
+const unknownEndpoint = (request, response) => {
+  response.status(404).send({ error: 'tuntematon resurssi' })
+}
+app.use(unknownEndpoint)
+
+// Virheidenkäsittelijä
+const errorHandler = (error, request, response, next) => {
+  console.error(error.message)
+
+  if (error.name === 'CastError') {
+    return response.status(400).send({ error: 'Virheellinen id' })
+  } else if (error.name === 'ValidationError') {
+    return response.status(400).json({ error: error.message })
+  }
+
+  next(error)
+}
+app.use(errorHandler)
 
 
 const PORT = process.env.PORT

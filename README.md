@@ -6,6 +6,7 @@ Sovellus vastaa tehtäviin
 - [3.9 - 3.11](https://fullstackopen.com/osa3/sovellus_internetiin#tehtavat-3-9-3-11)
 - [3.12](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtava-3-12)
 - [3.13 - 3.14](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-13-3-14)
+- [3.15 - 3.18](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-15-3-18)
 
 ## Pikalinkit muihin työkaluihin
 - [MongoDB cloud](https://cloud.mongodb.com/)
@@ -28,6 +29,7 @@ Sovellus vastaa tehtäviin
 | 2 | Tehty tehtävä 3.12 |
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
 | 4 | Tehty tehtävät 3.13 ja 3.14 |
+| 1 | Tehty tehtävät 3.15, 3.16 |
 | **20**  | **Yhteensä** |
 
 ## Muistiinpanot
@@ -77,6 +79,10 @@ Sovellus vastaa tehtäviin
   - Tehty muutokset selainpuolen koodiin
 - Homma toimii kehitysympäristössä, mutta käyttöympäristössä tietokantayhteys katkesi?
 - Lisätty Atlas Cloud MongoDB:n Network Access IP listalle onrender:n osoitteet
+- Aloitettu tehtävien 3.15 - 3.18 tekeminen
+  - Lisätty virheenkäsittely yksittäisen numeron hakuun
+  - numerotietojen poistaminen toteutettu (tehtävä 3.15)
+  - Lisätty requestLogger (tehtävä 3.16)
  
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
