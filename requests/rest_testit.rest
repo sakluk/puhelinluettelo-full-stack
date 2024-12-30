@@ -47,6 +47,6 @@ Content-Type: application/json
 }
 
 ### Poista henkilö
-DELETE http://localhost:3001/api/persons/3
+DELETE http://localhost:3001/api/persons/6772836f7e38684bf77b5105
 
 
