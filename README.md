@@ -7,6 +7,12 @@ Sovellus vastaa tehtäviin
 - [3.12](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtava-3-12)
 - [3.13 - 3.14](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-13-3-14)
 
+## Pikalinkit muihin työkaluihin
+- [MongoDB cloud](https://cloud.mongodb.com/)
+- [Render dashboard](https://dashboard.render.com/)
+- [Azure portal](https://portal.azure.com/)
+- [Puhelinluettelo onrender](https://puhelinluettelo-full-stack-47c1.onrender.com)
+
 ## Käytetyt tunnit
   Tunnit | Tehtävä      |
 | -----  | ------------ |
@@ -20,8 +26,8 @@ Sovellus vastaa tehtäviin
 | 1 | Opiskeltu MongoDB:n käyttöä |
 | 2 | Tehty tehtävä 3.12 |
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
-| 1 | Tehty tehtävät 3.13 ja 3.14 |
-| **15**  | **Yhteensä** |
+| 2 | Tehty tehtävät 3.13 ja 3.14 |
+| **18**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
