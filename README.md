@@ -27,8 +27,8 @@ Sovellus vastaa tehtäviin
 | 1 | Opiskeltu MongoDB:n käyttöä |
 | 2 | Tehty tehtävä 3.12 |
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
-| 2 | Tehty tehtävät 3.13 ja 3.14 |
-| **18**  | **Yhteensä** |
+| 4 | Tehty tehtävät 3.13 ja 3.14 |
+| **20**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -76,14 +76,14 @@ Sovellus vastaa tehtäviin
   - Tehty tehtäviä 3.13 ja 3.14
   - Tehty muutokset selainpuolen koodiin
 - Homma toimii kehitysympäristössä, mutta käyttöympäristössä tietokantayhteys katkesi?
-
-  
+- Lisätty Atlas Cloud MongoDB:n Network Access IP listalle onrender:n osoitteet
+ 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 
 MongoDB-tehtävän (3.12) kanssa oli vaikeuksia. Sain esimerkit toimimaan ja aloitin koodaamaan omaa versiota. Huomasin, että yhteyden avaaminen ei onnistunut ja jouduin palaamaan takaisin aiempiin yksinkertaisempiin esimerkkeihin. Muokkaamalla esimerkkikoodia vähän kerrallaan sain toimivan [mongo.js](./mongo.js) kirjoitettua.
 
-Tehtävä 3.13 tekeminen meni kohtalaisen suoraviivaisesti. Henkilön poistaminen tietokannasta aiheutti jonkin verran päänvaivaa.
+Tehtävä 3.13 tekeminen meni kohtalaisen suoraviivaisesti. Henkilön poistaminen tietokannasta aiheutti jonkin verran päänvaivaa. Lisäksi sovelluksen käyttöönotto render-palvelussa oli haastava. [Atlas Cloud](https://cloud.mongodb.com/) vaati IP-osoitteet, joista tietokantaa saa kutsua. Näiden IP-osoitteiden löytämiseen meni aikaa. Kysyin apuja Copilotilta, mutta ohjeet johtivat harhaan. Samoin osoite piti antaa IP-formaatissa, ei URL:na. Lopulta löysin [dashboard.render.com/](https://dashboard.render.com/), kun avasin projektini Web Service -sivun, sivun oikeassa ylälaidassa, `Manual Deploy` -nappulan vieressä oli `Connect` -painike, josta löytyivät *Static Outbound IP Addresses*. Nämä kun kopioi [cloud.mongodb.com](https://cloud.mongodb.com) Security > Network Access > IP Access List:aan, niin sain myös käyttöönoton toimimaan.
 
 Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan. Esim. tehtävässä 3.8* antamalla Copilotille kehotteen: "Konfiguroi morgania näyttämään HTTP POST-pyyntöjen mukana tulevan datan", koodi oli valmis hetkessä.
 
