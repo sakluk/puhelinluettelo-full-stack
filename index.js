@@ -78,12 +78,7 @@ app.post('/api/persons', (request, response) => {
     const body = request.body
     console.log('body', body)
         
-    if (body.content === undefined  || body.content === '') {
-        return response.status(400).json({
-        error: 'sisältö puuttuu' })
-    }
-
-    // Tarkistetaan onko nimi ja numero annettu
+   // Tarkistetaan onko nimi ja numero annettu
     if (!body.name) {
         return response.status(400).json({
             error: 'Nimi puuttuu' })
