@@ -9,10 +9,10 @@ console.log('process.env', process.env)
 
 mongoose.connect(url)
     .then(result => {
-        console.log('connected to MongoDB')
+        console.log('yhdistetty tietokantaan')
     })
         .catch((error) => {
-        console.log('error connecting to MongoDB:', error.message)
+        console.log('virhe tietokannan yhdistämisessä:', error.message)
     })
 
 

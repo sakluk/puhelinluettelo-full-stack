@@ -46,15 +46,19 @@ app.get('/', (request, response) => {
 
 // Copilotin generoima koodi
 app.get('/info', (request, response) => {
-    response.send(`<p>Puhelinmuistiossa on ${persons.length} henkilön tiedot.</p>
-    <p>${new Date()}</p>`)
+
+  // Lue henkilöiden määrä
+    Person.find({}).then(persons => {
+      response.send(`<p>Puhelinmuistiossa on ${persons.length} henkilön tiedot.</p>
+      <p>${new Date()}</p>`)
+    })
   })
 
 
 app.get('/api/persons', (request, response) => {
      
-    Note.find({}).then(notes => {
-      response.json(notes)
+    Person.find({}).then(person => {
+      response.json(person)
     })
   })
 
