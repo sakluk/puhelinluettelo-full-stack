@@ -30,7 +30,8 @@ Sovellus vastaa tehtäviin
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
 | 4 | Tehty tehtävät 3.13 ja 3.14 |
 | 1 | Tehty tehtävät 3.15, 3.16 |
-| **20**  | **Yhteensä** |
+| 1 | Tehty tehtävä 3.17 |
+| **22**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -83,6 +84,7 @@ Sovellus vastaa tehtäviin
   - Lisätty virheenkäsittely yksittäisen numeron hakuun
   - numerotietojen poistaminen toteutettu (tehtävä 3.15)
   - Lisätty requestLogger (tehtävä 3.16)
+  - Lisätty puhelinnumeron muutoksen käsittely (tehtävä 3.17)
  
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
