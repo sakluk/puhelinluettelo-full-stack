@@ -30,7 +30,7 @@ Sovellus vastaa tehtäviin
 | 1 | Opiskeltu tietokantaa käyttävää palvelinta |
 | 4 | Tehty tehtävät 3.13 ja 3.14 |
 | 1 | Tehty tehtävät 3.15, 3.16 |
-| 1 | Tehty tehtävä 3.17 |
+| 1 | Tehty tehtävät 3.17 ja 3.18 |
 | **22**  | **Yhteensä** |
 
 ## Muistiinpanot
@@ -85,6 +85,7 @@ Sovellus vastaa tehtäviin
   - numerotietojen poistaminen toteutettu (tehtävä 3.15)
   - Lisätty requestLogger (tehtävä 3.16)
   - Lisätty puhelinnumeron muutoksen käsittely (tehtävä 3.17)
+  - Varmistettu että /info ja id-pohjainen numeronhaku toimii
  
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
