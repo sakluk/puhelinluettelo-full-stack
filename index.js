@@ -58,7 +58,9 @@ app.put('/api/persons/:id', (request, response, next) => {
     number: body.number
   }
 
-  Person.findByIdAndUpdate(request.params.id, person  , { new: true })
+  Person.findByIdAndUpdate(request.params.id, 
+    person, 
+    { new: true, runValidators: true, context: 'query' })
     .then(updatedPerson => {
       response.json(updatedPerson)
     })
@@ -67,7 +69,7 @@ app.put('/api/persons/:id', (request, response, next) => {
 
 
 // Lisää henkilö
-app.post('/api/persons', (request, response) => {
+app.post('/api/persons', (request, response, next) => {
   const body = request.body
   console.log('body', body)
 
@@ -92,6 +94,7 @@ app.post('/api/persons', (request, response) => {
   person.save().then(savedPerson => {
     response.json(savedPerson)
   })
+  .catch(error => next(error))
 })
 
 // Poista henkilö

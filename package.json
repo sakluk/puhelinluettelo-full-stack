@@ -9,6 +9,7 @@
     "debug": "node --inspect index.js",
     "dev": "nodemon index.js",
     "build": "@powershell Remove-Item -Recurse -Force dist && cd ../fullstack-mooc/osa3/puhelinluettelo && npm run build && @powershell Copy-Item dist -Recurse ../../../puhelinluettelo-full-stack",
+    "copy-front": "@powershell Copy-Item ../fullstack-mooc/osa3/puhelinluettelo/dist -Recurse .",
     "deploy": "npm run build && git add . && git commit -m uibuild && git push"
   },
   "author": "Sakari Lukkarinen",

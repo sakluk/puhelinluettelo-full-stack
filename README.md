@@ -16,22 +16,24 @@ Sovellus vastaa tehtäviin
 - [Puhelinluettelo onrender](https://puhelinluettelo-full-stack-47c1.onrender.com)
 
 ## Käytetyt tunnit
-  Tunnit | Tehtävä      |
-| -----  | ------------ |
-| 3 | Opiskeltu osaa 3a node.js ja express |
-| 1 | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
-| 1 | Tehty tehtävät 3.2 - 3.6 |
-| 1 | Tehty tehtävät 3.7 ja 3.8 |
-| 2 | Opiskelut osaa 3b Sovellus internettiin | 
-| 2 | Tehty tehtävät 3.9 - 3.11 |
-| 2 | Opiskeltu Azuren käyttöä |
-| 1 | Opiskeltu MongoDB:n käyttöä |
-| 2 | Tehty tehtävä 3.12 |
-| 1 | Opiskeltu tietokantaa käyttävää palvelinta |
-| 4 | Tehty tehtävät 3.13 ja 3.14 |
-| 1 | Tehty tehtävät 3.15, 3.16 |
-| 1 | Tehty tehtävät 3.17 ja 3.18 |
-| **22**  | **Yhteensä** |
+  Tunnit | Yht |Tehtävä      |
+| -----  | --- | -------- |
+| 3 |   | Opiskeltu osaa 3a node.js ja express |
+| 1 |   | Luotu ja alustettu uusi projekti, tehty tehtävä 3.1 |
+| 1 | 5 | Tehty tehtävät 3.2 - 3.6 |
+| 1 |   | Tehty tehtävät 3.7 ja 3.8 |
+| 2 |   | Opiskelut osaa 3b Sovellus internettiin | 
+| 2 | 10 |Tehty tehtävät 3.9 - 3.11 |
+| 2 |    | Opiskeltu Azuren käyttöä |
+| 1 |    | Opiskeltu MongoDB:n käyttöä |
+| 2 | 15 | Tehty tehtävä 3.12 |
+| 1 |    | Opiskeltu tietokantaa käyttävää palvelinta |
+| 4 | 20 | Tehty tehtävät 3.13 ja 3.14 |
+| 1 |    | Tehty tehtävät 3.15, 3.16 |
+| 1 |    | Tehty tehtävät 3.17 ja 3.18 |
+| 1 |    | Opiskeltu osa 3.d validointi ja ESLint |
+| 1 |    | Tehty tehtävät 3.19 ja 3.20 |
+|   | **24**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -86,7 +88,10 @@ Sovellus vastaa tehtäviin
   - Lisätty requestLogger (tehtävä 3.16)
   - Lisätty puhelinnumeron muutoksen käsittely (tehtävä 3.17)
   - Varmistettu että /info ja id-pohjainen numeronhaku toimii
- 
+- Osa 3.d. Validointi ja ESlint
+  - Opiskeltu [osa 3.d. Validointi ja ESlint](https://fullstackopen.com/osa3/validointi_ja_es_lint)
+  - Tehty tehtävät 3.19 ja 3.20 nimen ja puhelinnumeron validaatio
+
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
 

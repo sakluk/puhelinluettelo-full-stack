@@ -15,9 +15,27 @@ mongoose.connect(url)
     })
 
 
+// Määritellään skeema
+// Nimi ja numero ovat pakollisia, nimen tulee olla vähintään 3 merkkiä pitkä
+// ja numeron vähintään 8 merkkiä pitkä ja sen tulee olla muotoa xx-xxxxxxx
+// Numeron tarkistus on tehty regexillä ja se tarkistaa, että numero on muotoa
+// xx-xxxxxxx, jossa x on numero. Tarkistus ei ole täydellinen, mutta se on riittävä
+// tähän tehtävään. Kommentit ja numeron tarkistus on generoitu käyttäen Copilotia.
 const personSchema = new mongoose.Schema({
-  name: String,
-  number: String,
+  name: {
+    type: String,
+    minLength: [3, 'Nimen tulee olla vähintään 3 merkkiä pitkä'],
+  },
+  number: {
+    type: String,
+    validate: {
+      validator: function(v) {
+        return /^\d{2,3}-\d+$/.test(v);
+      },
+      message: props => `${props.value} ei ole kelvollinen puhelinnumero!`
+    },
+    minLength: [8, `Numeron tulee olla vähintään 8 merkkiä pitkä`],
+  },
 })
 
 // Lisätään toJSON-metodi, joka muokkaa _id:n ja __v:n
