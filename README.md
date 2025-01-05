@@ -8,13 +8,14 @@ Sovellus vastaa tehtäviin
 - [3.13 - 3.14](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-13-3-14)
 - [3.15 - 3.18](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-15-3-18)
 - [3.19 - 3.21](https://fullstackopen.com/osa3/validointi_ja_es_lint#tehtavat-3-19-3-21)
+- [3.22](https://fullstackopen.com/osa3/validointi_ja_es_lint#tehtava-3-22)
 
 ## Pikalinkit muihin työkaluihin
 - [MongoDB cloud](https://cloud.mongodb.com/)
 - [Render dashboard](https://dashboard.render.com/)
   - [Deploy for free | Render](https://render.com/docs/free)
 - [Azure portal](https://portal.azure.com/)
-- [Puhelinluettelo onrender](https://puhelinluettelo-full-stack-47c1.onrender.com)
+- [Full-stack puhelinluettelo app onrender](https://puhelinluettelo-full-stack-47c1.onrender.com)
 
 ## Käytetyt tunnit
   Tunnit | Yht |Tehtävä      |
@@ -34,7 +35,8 @@ Sovellus vastaa tehtäviin
 | 1 |    | Tehty tehtävät 3.17 ja 3.18 |
 | 1 |    | Opiskeltu osa 3.d validointi ja ESLint |
 | 2 | 25 | Tehty tehtävät 3.19- 3.21 |
-|   | **25**  | **Yhteensä** |
+| 2 |    | Tehty tehtävä 3.22 |
+|   | **27**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -94,19 +96,14 @@ Sovellus vastaa tehtäviin
   - Tehty tehtävät 3.19 ja 3.20 nimen ja puhelinnumeron validaatio
   - Generoitu sovelluksesta "full stack" -versio, varmistettu toiminta paikallisesti ja otettu sovellus käyttöön Renderissä osoitteessa: https://puhelinluettelo-full-stack-47c1.onrender.com/ (tehtävä 3.21)
   - Asennettu ESlint lisäosa VSCodeen
-  - Asennettu ESlint `npm install eslint`
-  - Alustettu ESlint `npx eslint --init`
-    - Check syntax and find problems
-    - CommonJS (require/exports)
-    - React as framework
-    - No TypeScript
-    - Where does your code run (all): Broswer and Node
-    - Install dependies: Yes
-    - Package manager npm
-
-
-
-
+  - Asennettu ja alustettu ESlint ensiksi seuraavasti:
+    - `npm install eslint` ja `npx eslint --init`
+    - Tämän jälkeen luettu ohjeet tarkemmin ja tehty uusi asennus
+  - Asennettu ja alustettu ESlint uudestaan:
+    - `npm install eslint @eslint/js --save-dev`
+    - `npx eslint --init`
+    - Kopioitu kokonaisuudessaan annettu konfiguraatiotiedosto
+  - Lintattu taustapalvelin-osuus (tehtävä 3.22)
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.

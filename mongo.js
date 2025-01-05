@@ -40,7 +40,7 @@ if (process.argv.length === 3) {
 
 // Lisää uusi numero
 if (process.argv.length === 5) {
-  
+
   const name = process.argv[3]
   const number = process.argv[4]
 
@@ -49,7 +49,7 @@ if (process.argv.length === 5) {
     number: number,
   })
 
-  person.save().then(result => {
+  person.save().then(() => {
     console.log(`lisätty ${name} numero ${number} puhelinluetteloon`)
     mongoose.connection.close()
   })

@@ -7,13 +7,12 @@ mongoose.set('strictQuery', false)
 const url = process.env.MONGODB_URI
 
 mongoose.connect(url)
-    .then(result => {
-        console.log('yhdistetty tietokantaan')
-    })
-        .catch((error) => {
-        console.log('virhe tietokannan yhdistämisessä:', error.message)
-    })
-
+  .then(() => {
+    console.log('yhdistetty tietokantaan')
+  })
+  .catch((error) => {
+    console.log('virhe tietokannan yhdistämisessä:', error.message)
+  })
 
 // Määritellään skeema
 // Nimi ja numero ovat pakollisia, nimen tulee olla vähintään 3 merkkiä pitkä
@@ -30,11 +29,11 @@ const personSchema = new mongoose.Schema({
     type: String,
     validate: {
       validator: function(v) {
-        return /^\d{2,3}-\d+$/.test(v);
+        return /^\d{2,3}-\d+$/.test(v)
       },
       message: props => `${props.value} ei ole kelvollinen puhelinnumero!`
     },
-    minLength: [8, `Numeron tulee olla vähintään 8 merkkiä pitkä`],
+    minLength: [8, 'Numeron tulee olla vähintään 8 merkkiä pitkä'],
   },
 })
 
