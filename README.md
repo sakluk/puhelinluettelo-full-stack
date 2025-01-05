@@ -92,7 +92,21 @@ Sovellus vastaa tehtäviin
 - Osa 3.d. Validointi ja ESlint
   - Opiskeltu [osa 3.d. Validointi ja ESlint](https://fullstackopen.com/osa3/validointi_ja_es_lint)
   - Tehty tehtävät 3.19 ja 3.20 nimen ja puhelinnumeron validaatio
-  - Generoitu sovelluksesta "full stack" -versio, varmistettu toiminta paikallisesti ja otettu sovellus käyttöön Renderissä osoitteessa: https://puhelinluettelo-full-stack-47c1.onrender.com/ 
+  - Generoitu sovelluksesta "full stack" -versio, varmistettu toiminta paikallisesti ja otettu sovellus käyttöön Renderissä osoitteessa: https://puhelinluettelo-full-stack-47c1.onrender.com/ (tehtävä 3.21)
+  - Asennettu ESlint lisäosa VSCodeen
+  - Asennettu ESlint `npm install eslint`
+  - Alustettu ESlint `npx eslint --init`
+    - Check syntax and find problems
+    - CommonJS (require/exports)
+    - React as framework
+    - No TypeScript
+    - Where does your code run (all): Broswer and Node
+    - Install dependies: Yes
+    - Package manager npm
+
+
+
+
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
