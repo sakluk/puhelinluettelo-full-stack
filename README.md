@@ -7,6 +7,7 @@ Sovellus vastaa tehtäviin
 - [3.12](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtava-3-12)
 - [3.13 - 3.14](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-13-3-14)
 - [3.15 - 3.18](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#tehtavat-3-15-3-18)
+- [3.19 - 3.21](https://fullstackopen.com/osa3/validointi_ja_es_lint#tehtavat-3-19-3-21)
 
 ## Pikalinkit muihin työkaluihin
 - [MongoDB cloud](https://cloud.mongodb.com/)
@@ -32,8 +33,8 @@ Sovellus vastaa tehtäviin
 | 1 |    | Tehty tehtävät 3.15, 3.16 |
 | 1 |    | Tehty tehtävät 3.17 ja 3.18 |
 | 1 |    | Opiskeltu osa 3.d validointi ja ESLint |
-| 1 |    | Tehty tehtävät 3.19 ja 3.20 |
-|   | **24**  | **Yhteensä** |
+| 2 | 25 | Tehty tehtävät 3.19- 3.21 |
+|   | **25**  | **Yhteensä** |
 
 ## Muistiinpanot
 - Opiskeltu osa3 [node.js ja express](https://fullstackopen.com/osa3/node_js_ja_express) ja luotu osiossa esitelty [esimerkki-sovellus](https://github.com/sakluk/fullstack-mooc/tree/main/osa3/esimerkki)
@@ -91,6 +92,7 @@ Sovellus vastaa tehtäviin
 - Osa 3.d. Validointi ja ESlint
   - Opiskeltu [osa 3.d. Validointi ja ESlint](https://fullstackopen.com/osa3/validointi_ja_es_lint)
   - Tehty tehtävät 3.19 ja 3.20 nimen ja puhelinnumeron validaatio
+  - Generoitu sovelluksesta "full stack" -versio, varmistettu toiminta paikallisesti ja otettu sovellus käyttöön Renderissä osoitteessa: https://puhelinluettelo-full-stack-47c1.onrender.com/ 
 
 
 Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkertaisia taustapalvelimen resurssien kutsuja tai poistoja, pystyi ajattelemaan suoraviivaisesti pala kerrallaan, eikä tarvinnut pitää mielessä montaa asiaa. Tein jokaista REST-rajapinnan kutsua varten oman testikomennon, jotka kaikki on tallennettu [./requests](./requests)-kansioon.
@@ -98,6 +100,8 @@ Näiden tehtävien tekeminen oli suoraviivaisempaa, koska toteuttaessa yksinkert
 MongoDB-tehtävän (3.12) kanssa oli vaikeuksia. Sain esimerkit toimimaan ja aloitin koodaamaan omaa versiota. Huomasin, että yhteyden avaaminen ei onnistunut ja jouduin palaamaan takaisin aiempiin yksinkertaisempiin esimerkkeihin. Muokkaamalla esimerkkikoodia vähän kerrallaan sain toimivan [mongo.js](./mongo.js) kirjoitettua.
 
 Tehtävä 3.13 tekeminen meni kohtalaisen suoraviivaisesti. Henkilön poistaminen tietokannasta aiheutti jonkin verran päänvaivaa. Lisäksi sovelluksen käyttöönotto render-palvelussa oli haastava. [Atlas Cloud](https://cloud.mongodb.com/) vaati IP-osoitteet, joista tietokantaa saa kutsua. Näiden IP-osoitteiden löytämiseen meni aikaa. Kysyin apuja Copilotilta, mutta ohjeet johtivat harhaan. Samoin osoite piti antaa IP-formaatissa, ei URL:na. Lopulta löysin [dashboard.render.com/](https://dashboard.render.com/), kun avasin projektini Web Service -sivun, sivun oikeassa ylälaidassa, `Manual Deploy` -nappulan vieressä oli `Connect` -painike, josta löytyivät *Static Outbound IP Addresses*. Nämä kun kopioi [cloud.mongodb.com](https://cloud.mongodb.com) Security > Network Access > IP Access List:aan, niin sain myös käyttöönoton toimimaan.
+
+Tässä vaiheessa huomasin myös, että sovelluksen monimutkaistuessa kokemattomuus verkkosovellusten tekemisestä näkyy erityisesti virheiden löytämisessä ja niiden korjaamisessa. Koodissa oli joukko pieniä puutteita, jotka alkoivat ilmetä viimeisiä tehtäviä tehdessä ja näiden korjaamiseen ja koodin toiminnan ymmärtämiseen meni yllättävästi aikaa.
 
 Edelleen hämmästelen kuinka hyvin Copilot tekee ensimmäisen arvauksen, kun koodiin tarvitsee tehdä lisäyksiä. Copilotin kirjoittamaa koodia on tarvinnut korjata hyvin vähän, jos ollenkaan. Esim. tehtävässä 3.8* antamalla Copilotille kehotteen: "Konfiguroi morgania näyttämään HTTP POST-pyyntöjen mukana tulevan datan", koodi oli valmis hetkessä.
 
